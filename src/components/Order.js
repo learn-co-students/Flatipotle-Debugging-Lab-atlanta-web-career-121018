@@ -12,9 +12,6 @@ class Order extends Component {
         isClicked: !prevState.isClicked
       }
     })
-    // this.setState((x) => {
-    //   x.isClicked = !this.state.isClicked
-    // })
   }
 
   render() {
@@ -42,10 +39,7 @@ class Order extends Component {
             :
               <p>No sides</p>
           }
-
-          { /* this is just a shortcut to writing this.state.isClicked ? <Side sides={this.props.sides} /> : null */ }
-          { this.state.isClicked && <Side sides={this.props.sides} /> }
-
+          { this.state.isClicked && <Side sides={ this.props.sides } /> }
         </div>
       </div>
     )
